@@ -1,7 +1,14 @@
-output "instance_ami" {
-  value = aws_instance.ubuntu.ami
+variable "region" {
+  description = "AWS region"
+  default     = "us-west-1"
 }
 
-output "instance_arn" {
-  value = aws_instance.ubuntu.arn
+variable "instance_type" {
+  description = "Type of EC2 instance to provision"
+  default     = "t2.micro"
+}
+
+variable "instance_name" {
+  description = "EC2 instance name"
+  default     = "EC2-test"
 }
